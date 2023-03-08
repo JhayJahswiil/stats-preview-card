@@ -1,0 +1,25 @@
+@use '../abstract/mixins' as *;
+@use '../abstract/typography' as *;
+@use '../abstract/colors' as *;
+
+// FONT IMPORT
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+// BASE
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    min-height: 100vh;
+    @include flexbox($direction: column);
+    background-color: $very-dark-blue;
+}

@@ -1,0 +1,80 @@
+@use '../base/base' as *;
+@use '../abstract/colors' as *;
+@use '../abstract/mixins' as *;
+@use '../abstract/typography' as *;
+
+
+// MAIN
+.main-sec{
+    background-color: $dark-desaturated-blue;
+    width: 900px;
+    @include flexbox;
+
+    &--left{
+        // border: 2px solid red;
+        padding: 40px 60px;
+        width: 60%;
+        align-self: flex-start;
+
+        h1{
+            font-family: $inter-family;
+            color: $white;
+
+            span{
+                color: $soft-violet;
+            }
+        }
+
+        .left-p{
+            font-size: 15px;
+            color: $slightly-transparent-white;
+            margin-top: 30px;
+            font-family: $lexand-family;
+        }
+
+        .achievements{
+            // border: 2px solid red;
+            @include flexbox($justify: space-between);
+            margin-top: 30px;
+
+            .achievement{
+                p{
+                    font-size: 15px;
+                    font-family: $inter-family;
+                    color: $white;
+                    font-weight: $fw-700;
+                    
+                }
+
+                small{
+                    margin-top: 10px;
+                    font-family: $lexand-family;
+                    color: $slightly-transparent-white;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+
+    &--right{
+        border: 2px solid red;
+        // object-fit: contain;
+        img{
+            width: 100%;
+        }
+    }
+}
+// FOOTER
+footer{
+    position: absolute;
+    bottom: 10px;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+
+        a{
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
